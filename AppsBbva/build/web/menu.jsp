@@ -114,7 +114,7 @@
                 $('#PAGO').hide;
                 $('#CUENTA').hide();
                 $('#HISTORIAL').hide();
-                /*
+                
                 function CargarDoc() {
                     $('#DOCUMENTO').css("visibility", "visible");
                     var servicio = $("#servicio").val();
@@ -142,7 +142,7 @@
                     } else if (estado == "DEBE") {
                         $("#estado").html("DEBE PAGO");
                     }
-                }*/
+                }
 
                 function CargarTarjetas() {
                     var tarjetas = new Array();
