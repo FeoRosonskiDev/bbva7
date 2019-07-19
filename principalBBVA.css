@@ -1,0 +1,10 @@
+.tarjeta{
+        background-image: url(https://www.bbva.pe/content/dam/public-web/peru/images/credit-cards/product-credit-VISA-cero.png.img.960.1545859827451.png);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+
+      }
+      .formulario{
+        background-position: right;
+      }
