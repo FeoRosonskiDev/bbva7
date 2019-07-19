@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.com.bbva.controlador;
+package pe.com.bbva.interfaces;
 
 /**
  *
  * @author luchuyac
  */
-public class Cliente {
-    
+public interface DAOcliente {
+   
 }
