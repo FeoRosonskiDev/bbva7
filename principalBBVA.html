@@ -37,15 +37,18 @@
   </div>
 </div>
 
-    <div id='PAGO'>          
-        <p>Seleccione su servicio</p>
-        <select id='servicio' onchange='CargarDoc()'>
-            <option value="0"></option>
-            <option>LUZ</option>
-            <option>AGUA</option>
-            <option>TELEFONO</option>
+<div class="jumbotron" id='PAGO'>
+  <h1 class="display-4">Seleccione su servicio</h1>
+  <select id='servicio' onchange='CargarDoc()' class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <option value="0" class="dropdown-menu" aria-labelledby="dropdownMenuButton">------</option>
+            <option class="dropdown-item">LUZ</option>
+            <option class="dropdown-item">AGUA</option>
+            <option class="dropdown-item">TELEFONO</option>
         </select>
-        <label id='estado'></label>        
+        <label id='estado'></label> 
+          <hr class="my-4">   
+
+  
         <div id='DOCUMENTO'>
             <br><label class='campodoc'>CLIENTE</label><label id='cliente'></label>
             <br><label class='campodoc'>SERVICIO</label><label id='servicio2'></label>
@@ -55,13 +58,13 @@
             <br><label class='campodoc'>ESTADO</label><label id='estado2'></label>
             <br><label class='campodoc'>PROVEEDOR</label><label id='proveedor'></label>
             <br><label class='campodoc'>IDENTIFICADOR</label><label id='identificador'></label>
-        </div>        
-        <br>  
-        <button onclick='Continuar()'>CONTINUAR</button>
-    </div>
+        </div> 
+  <button class="btn btn-primary" onclick='Continuar()'>CONTINUAR</button>
+</div>
+
     <div id='CUENTA'>
-        <label>NÚMERO DE CUENTA</label>
-        <select id='cuenta' onchange='CambiarTarjeta()'>            
+        <label>NÚMERO DE TARJETA</label>
+        <select id='cuenta' onchange='CambiarTarjeta()' class="alert alert-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">            
         </select>
         <br>
         <button onclick='Regresar()'>REGRESAR</button>
@@ -119,10 +122,10 @@ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anon
         }
         var estado = $("#estado2").html();
         if(estado=="PAGADO"){
-            $("#estado").html("PAGO REALIZADO");
+            $("#estado").html("<div class='alert alert-success'><i>Pago realizado</i></div>");
         }
         else if(estado=="DEBE"){
-            $("#estado").html("DEBE PAGO");
+            $("#estado").html("<div class='alert alert-danger'><i><i>Debe pago</i></div>");
         }
     }
    
