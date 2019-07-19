@@ -10,5 +10,6 @@ import pe.com.bbva.modelo.Cliente;
 public interface DAOcliente {
    
     public Cliente validarCliente(Cliente cliente);
-    
+    public boolean registrarCliente(Cliente cliente);
+    public Integer actualizarCliente(Cliente cliente);
 }

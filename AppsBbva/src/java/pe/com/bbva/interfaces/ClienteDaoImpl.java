@@ -53,5 +53,56 @@ public class ClienteDaoImpl implements DAOcliente{
         
         return cliente;
     }
+
+    @Override
+    public boolean registrarCliente(Cliente cliente) 
+    {
+        boolean salida = false;
+        String sql = "insert into clientes (NOMBRE,DNI, clave, TELEFONO, ESTADO) values (?,?,?,?,?)";
+        
+        try {
+            cn = Conexion.obtener();
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, cliente.getNombre());
+            ps.setString(2, cliente.getDni());
+            ps.setString(3, cliente.getClave());
+            ps.setString(4, cliente.getTelefono());
+            ps.setString(5, "A");
+            
+            if (ps.executeUpdate() == 1)
+            {
+                salida = true;
+            }
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(ClienteDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return salida;
+    }
+
+    @Override
+    public Integer actualizarCliente(Cliente cliente) 
+    {
+        Integer actualizado = 0;
+        
+        String sql = "update clientes set nombre = ?, dni = ?, clave = ?, telefono = ? where id_cliente = ?";
+        
+        try {
+            cn = Conexion.obtener();
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, cliente.getNombre());
+            ps.setString(2, cliente.getDni());
+            ps.setString(3, cliente.getClave());
+            ps.setString(4, cliente.getTelefono());
+            ps.setInt(5, cliente.getId_cliente());
+            
+            if (ps.executeUpdate() == 1)
+            {
+                actualizado = 1;
+            }
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(ClienteDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return actualizado;
+    }
     
 }
