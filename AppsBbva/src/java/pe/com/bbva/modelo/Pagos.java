@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.com.bbva.controlador;
+package pe.com.bbva.modelo;
 
 /**
  *
  * @author luchuyac
  */
-public class Cliente {
+public class Pagos {
+    public Cliente cliente;
+    public Servicios servicios;
+    public double monto ;
     
 }
