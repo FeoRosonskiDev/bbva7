@@ -20,7 +20,7 @@ public class ClienteDaoImpl implements DAOcliente{
         
         Cliente cl = null;
         
-        String sql = "select * clientes where DNI = ? AND CLAVE = ?";
+        String sql = "select * from clientes where DNI = ? AND CLAVE = ? ";
         
         try {
             cn = Conexion.obtener();
@@ -44,7 +44,7 @@ public class ClienteDaoImpl implements DAOcliente{
     private Cliente cargarDatos(ResultSet rs) throws SQLException
     {
         Cliente cliente = new Cliente();
-        cliente.setId_cliente(rs.getInt("ID"));
+        cliente.setId_cliente(rs.getInt("ID_CLIENTE"));
         cliente.setNombre(rs.getString("NOMBRE"));
         cliente.setDni(rs.getString("DNI"));
         cliente.setClave(rs.getString("CLAVE"));

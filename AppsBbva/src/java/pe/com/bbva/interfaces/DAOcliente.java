@@ -7,10 +7,6 @@ package pe.com.bbva.interfaces;
 
 import pe.com.bbva.modelo.Cliente;
 
-/**
- *
- * @author luchuyac
- */
 public interface DAOcliente {
    
     public Cliente validarCliente(Cliente cliente);

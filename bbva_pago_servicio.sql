@@ -1,5 +1,5 @@
-CREATE DATABASE BBVA_PAGOSERVICIOS
-USE BBVA_PAGOSERVICIOS
+CREATE DATABASE BBVA_PAGOSERVICIOS;
+USE BBVA_PAGOSERVICIOS;
 
 --
 -- Estructura de tabla para la tabla `CLIENTE`
@@ -15,8 +15,7 @@ CREATE TABLE `CLIENTES`(
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `CLIENTES`(`ID_CLIENTE`,`NOMBRE`,`DNI`,`TELEFONO`,`ESTADO`) VALUES (1,'AMERICO CORNELIO BALTAZAR','71844254','12345','93573081','A'),
-                                                                                (),
+INSERT INTO `CLIENTES`(`ID_CLIENTE`,`NOMBRE`,`DNI`, clave,`TELEFONO`,`ESTADO`) VALUES (1,'AMERICO CORNELIO BALTAZAR','71844254','12345','93573081','A');
 --
 -- Estructura de tabla para la tabla `TARJETA`
 --
@@ -28,8 +27,8 @@ CREATE TABLE `TARJETA`(
 `NUMEROTARJETA` VARCHAR(16) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `TARJETA`(`IDTARJETA`,`IDTIPOTARJETA`,`NUMEROTARJETA`) VALUES (1,'DEBITO','1234567891234567'),
-                                                                          (2,'CREDITO','9876541231234567'),
+INSERT INTO `TARJETA`(`IDCLIENTE`,`IDTARJETA`, tipotarjeta,`NUMEROTARJETA`) VALUES (1, null,'DEBITO','1234567891234567'),
+                                                                          (1, null,'CREDITO','9876541231234567');
 
 --
 -- Estructura de tabla para la tabla `FACTURA`
