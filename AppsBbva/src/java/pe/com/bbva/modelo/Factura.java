@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.bbva.modelo;
 
 import java.sql.Date;
 
-/**
- *
- * @author luchuyac
- */
-public class factura {
+public class Factura {
     
     Cliente cliente;
     Servicio servicio;

@@ -44,7 +44,7 @@ public class ClienteDaoImpl implements DAOcliente{
     private Cliente cargarDatos(ResultSet rs) throws SQLException
     {
         Cliente cliente = new Cliente();
-        cliente.setId_cliente(rs.getInt("ID_CLIENTE"));
+        cliente.setId_cliente(rs.getInt("IDCLIENTE"));
         cliente.setNombre(rs.getString("NOMBRE"));
         cliente.setDni(rs.getString("DNI"));
         cliente.setClave(rs.getString("CLAVE"));
@@ -84,7 +84,7 @@ public class ClienteDaoImpl implements DAOcliente{
     {
         Integer actualizado = 0;
         
-        String sql = "update clientes set nombre = ?, dni = ?, clave = ?, telefono = ? where id_cliente = ?";
+        String sql = "update clientes set nombre = ?, dni = ?, clave = ?, telefono = ? where idcliente = ?";
         
         try {
             cn = Conexion.obtener();
