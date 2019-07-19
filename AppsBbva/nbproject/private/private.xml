@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/luchuyac/NetBeansProjects/AppsBbva/web/index.html</file>
-            <file>file:/home/luchuyac/NetBeansProjects/AppsBbva/src/java/pe/com/bbva/controlador/Cliente.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/interfaces/FacturaDaoImpl.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/controlador/NewClass.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/interfaces/DAOcliente.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/modelo/Conexion.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/modelo/Factura.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/controlador/validarInicio.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/interfaces/ClienteDaoImpl.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/web/menu.jsp</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/modelo/FacturasNoPagadas.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/src/java/pe/com/bbva/interfaces/DaoFactura.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/Bbva7Project/AppsBbva/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

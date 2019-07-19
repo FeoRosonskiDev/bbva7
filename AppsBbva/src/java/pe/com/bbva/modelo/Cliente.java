@@ -13,9 +13,10 @@ public class Cliente {
     
     private int id_cliente;
     private String nombre;
-    private int dni;
-    private int clave;
-    private int telefono;
+    private String dni;
+    private String clave;
+    private String telefono;
+    private String estado;
 
     public int getId_cliente() {
         return id_cliente;
@@ -33,37 +34,36 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
-    public int getClave() {
+    public String getClave() {
         return clave;
     }
 
-    public void setClave(int clave) {
+    public void setClave(String clave) {
         this.clave = clave;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public int getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
-    private int estado ;
     
 }
