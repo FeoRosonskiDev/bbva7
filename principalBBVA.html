@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base target="_top">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../BBVAH/principalBBVA.css">
+     </head>
+  <body class="tarjeta">
+          <div class=" container" id="INGRESO">
+            <div class=" row col-12 justify-content-start">
+              <div class="row justify-content-end">
+                <form class="formulario col-12" >
+                <div class="form-group">
+                   <div class="form-group">
+                  <label for="formGroupExampleInput">Usuario</label>
+                  <input type="text" class="form-control" id="usuario" placeholder="DNI">
+                  </div>
+                      <small id="emailHelp" class="form-text text-muted">Recuerde digitar bien sus datos...</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="contrasenia" placeholder="Contraseña">
+                </div>
+                <button  onclick='Validar()' type="submit" class="btn btn-primary col-12">Entrar</button>
+                </form>
+             </div>
+            </div>
+          </div>
+  
+  <div class=" container" id="ventana">
+            <div class=" row col-12 justify-content-start">
+              <p>BIENVENIDOS AL PORTAL</p>
+       <br>            
+       <p>Seleccione su servicio</p>
+       <select id='servicio' onchange='CargarDoc()'>
+           <option value="0"></option>
+           <option>LUZ</option>
+           <option>AGUA</option>
+           <option>TELEFONO</option>
+       </select>
+       <label id='estado'></label>        
+       <div id='DOCUMENTO'>
+           <br><label class='campodoc'>CLIENTE</label><label id='cliente'></label>
+           <br><label class='campodoc'>SERVICIO</label><label id='servicio2'></label>
+           <br><label class='campodoc'>MONTO</label><label id='monto'></label>
+           <br><label class='campodoc'>FECHA DE EMISION</label><label id='fechaemi'></label>
+           <br><label class='campodoc'>FECHA DE VENCIMIENTO</label><label id='fechavenc'></label>
+           <br><label class='campodoc'>ESTADO</label><label id='estado2'></label>
+           <br><label class='campodoc'>PROVEEDOR</label><label id='proveedor'></label>
+           <br><label class='campodoc'>IDENTIFICADOR</label><label id='identificador'></label>
+       </div>
+       <br>
+       <label>NÚMERO DE CUENTA</label>
+       <select id='cuenta' onchange='CambiarTarjeta()'>            
+       </select>
+       <br>
+       <button onclick='Pagar()'>PAGAR</button>
+              </div>
+    </div>
+  </body>
+  <script src="../BBVAH/indexBBVA.js" type="text/javascript" ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous" type="text/javascript">
+  </script>
+</html>
+
