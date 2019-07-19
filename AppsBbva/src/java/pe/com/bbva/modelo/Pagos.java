@@ -10,6 +10,7 @@ package pe.com.bbva.modelo;
  * @author luchuyac
  */
 public class Pagos {
+    
     public Cliente cliente;
     public Servicios servicios;
     public double monto ;

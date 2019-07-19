@@ -10,7 +10,5 @@ package pe.com.bbva.interfaces;
  * @author luchuyac
  */
 public interface DAOcliente {
-    
    
-    
 }
