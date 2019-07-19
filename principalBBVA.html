@@ -5,6 +5,22 @@
     <base target="_top">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--     <link rel="stylesheet" type="text/css" href="../BBVAH/principalBBVA.css"> -->
+   <style type="text/css">
+     .campodoc{
+       width: 180px;
+       background-color: #85b4ff;
+       border: 1px white solid;
+   }
+   .campodoc2{
+       border: 1px white solid;
+   }
+   .campodoc:nth-child(even){
+       background-color: white;
+   }
+   .campodoc2:nth-child(even){
+       background-color: #85b4ff;
+   }
+   </style>
      </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -47,32 +63,40 @@
         </select>
         <label id='estado'></label> 
           <hr class="my-4">   
-
-  
         <div id='DOCUMENTO'>
-            <br><label class='campodoc'>CLIENTE</label><label id='cliente'></label>
-            <br><label class='campodoc'>SERVICIO</label><label id='servicio2'></label>
-            <br><label class='campodoc'>MONTO</label><label id='monto'></label>
-            <br><label class='campodoc'>FECHA DE EMISION</label><label id='fechaemi'></label>
-            <br><label class='campodoc'>FECHA DE VENCIMIENTO</label><label id='fechavenc'></label>
-            <br><label class='campodoc'>ESTADO</label><label id='estado2'></label>
-            <br><label class='campodoc'>PROVEEDOR</label><label id='proveedor'></label>
-            <br><label class='campodoc'>IDENTIFICADOR</label><label id='identificador'></label>
+            <br><label class='campodoc1'>CLIENTE</label><label id='cliente'></label>
+            <br><label class='campodoc1'>SERVICIO</label><label id='servicio2'></label>
+            <br><label class='campodoc1'>MONTO</label><label id='monto'></label>
+            <br><label class='campodoc1'>FECHA DE EMISION</label><label id='fechaemi'></label>
+            <br><label class='campodoc1'>FECHA DE VENCIMIENTO</label><label id='fechavenc'></label>
+            <br><label class='campodoc1'>ESTADO</label><label id='estado2'></label>
+            <br><label class='campodoc1'>PROVEEDOR</label><label id='proveedor'></label>
+            <br><label class='campodoc1'>IDENTIFICADOR</label><label id='identificador'></label>
         </div> 
   <button class="btn btn-primary" onclick='Continuar()'>CONTINUAR</button>
 </div>
 
-    <div id='CUENTA'>
-        <label>NÚMERO DE TARJETA</label>
-        <select id='cuenta' onchange='CambiarTarjeta()' class="alert alert-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">            
+<div class="card text-center" id='CUENTA'>
+  <div class="card-header">
+    ELEGIR NÚMERO DE TARJETA
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <select id='cuenta' onchange='CambiarTarjeta()' class="alert alert-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">            
         </select>
-        <br>
-        <button onclick='Regresar()'>REGRESAR</button>
-        <button onclick='Pagar()'>PAGAR</button>
-    </div>
-    <div id='HISTORIAL'>
-        <p>Seleccione su servicio</p>
-        <select id='Dservicio' onchange='CargarDoc2()'>
+    <!-- <a href="#" class="btn btn-primary"><i>Pagalo</i></a> -->
+    <button class="btn btn-primary" onclick='Regresar()'>REGRESAR</button>
+    <button class="btn btn-success" onclick='Pagar()'>PAGAR</button>
+  </div>
+</div>
+
+    <div class="card text-center" id='HISTORIAL'>
+  <div class="card-header">
+    Seleccione su servicio
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <select id='Dservicio' onchange='CargarDoc2()' class="alert alert-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <option value="0"></option>
             <option>LUZ</option>
             <option>AGUA</option>
@@ -88,10 +112,14 @@
             <br><label class='campodoc'>PROVEEDOR</label><label id='Dproveedor'></label>
             <br><label class='campodoc'>IDENTIFICADOR</label><label id='Didentificador'></label>
         </div>
-        <button onclick="Descargar()">Descargar</button>
-    </div>
+    <button class="btn btn-success" onclick="Descargar()">Descargar</button>
+  </div>
+</div>
   </body>
 <!--   <script src="../BBVAH/indexBBVA.js" type="text/javascript" ></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous" type="text/javascript"> </script>
@@ -171,11 +199,13 @@ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anon
     function ModuloA(){
         $('#PAGO').show();
         $('#INICIO').hide();
+        $('#HISTORIAL').hide();
     }
     function ModuloB(){
         $('#HISTORIAL').show();
         $('#DOCUMENTO2').css("visibility","hidden");
         $('#INICIO').hide();
+        $('#CUENTA').hide();
     }
    
     function CargarDoc2(){
@@ -186,48 +216,57 @@ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anon
         A.push(["MARCOS","LUZ",20,"19/07/2019","25/07/2019","PAGADO","P001","XA1"]);
         A.push(["MARCOS","AGUA",25,"19/07/2019","30/07/2019","DEBE","P002","XB1"]);
         A.push(["MARCOS","TELEFONO",30,"19/07/2019","31/07/2019","DEBE","P003","XC1"]);
-        for(var i=0;i<A.length;i++){
-            if(A[i][1]==servicio){
-                DATOS = A[i];
-                $("#Dcliente").html(A[i][0]);
-                $("#Dservicio2").html(A[i][1]);                
-                $("#Dmonto").html(A[i][2]);
-                $("#Dfechaemi").html(A[i][3]);
-                $("#Dfechavenc").html(A[i][4]);
-                $("#Destado2").html(A[i][5]);
-                $("#Dproveedor").html(A[i][6]);
-                $("#Didentificador").html(A[i][7]);
-                break;
-            }
-        }
+        var encontro = false;
+       for(var i=0;i<A.length;i++){
+           if(A[i][1]==servicio  && A[i][5]=="PAGADO"){
+               DATOS = A[i];                
+               $('#DOCUMENTO2').css("visibility","visible");
+               $("#Dcliente").html(A[i][0]);
+               $("#Dservicio2").html(A[i][1]);                
+               $("#Dmonto").html(A[i][2]);
+               $("#Dfechaemi").html(A[i][3]);
+               $("#Dfechavenc").html(A[i][4]);
+               $("#Destado2").html(A[i][5]);
+               /*$("#Dproveedor").html(A[i][6]);
+               $("#Didentificador").html(A[i][7]);*/
+               return;
+           }
+       }
+       if(!encontro){
+           DATOS = "";
+           $('#DOCUMENTO2').css("visibility","hidden");
+       }
     }
    
     var DATOS;
    
 function Descargar(){
-    var datos = DATOS;
-    var pdf = new jsPDF();
-    pdf.setFontSize(14.5);
-    pdf.text(57,33,'Comprobante de Pago N° 1');      
-    pdf.setFontSize(10.5);    
-    pdf.text(47,50,'Nombre');
-    pdf.text(92,50,String(datos[0]));    
-    pdf.text(47,56,'Servicio');
-    pdf.text(92,56,String(datos[1]));    
-    pdf.text(47,62,'Monto');
-    pdf.text(92,62,String(datos[2]));
-    pdf.text(47,68,'Fecha Emisión');
-    pdf.text(92,68,String(datos[3]));
-    pdf.text(47,74,'Fecha Vencimiento');
-    pdf.text(92,74,String(datos[4]));
-    pdf.text(47,80,'Estado');
-    pdf.text(92,80,String(datos[5]));
-    pdf.text(47,86,'Proveedor');
-    pdf.text(92,86,String(datos[6]));
-    pdf.text(47,92,'Identicador');
-    pdf.text(92,92,String(datos[7]));
+   var datos = DATOS;
+   if(datos==""){
+       return;
+   }
+   var pdf = new jsPDF();
+   pdf.setFontSize(14.5);
+   pdf.text(57,33,'Comprobante de Pago N° 1'); 
+   pdf.setFontSize(10.5);    
+   pdf.text(47,50,'Nombre');
+   pdf.text(92,50,String(datos[0]));    
+   pdf.text(47,56,'Servicio');
+   pdf.text(92,56,String(datos[1]));    
+   pdf.text(47,62,'Monto');
+   pdf.text(92,62,String(datos[2]));
+   pdf.text(47,68,'Fecha Emisión');
+   pdf.text(92,68,String(datos[3]));
+   pdf.text(47,74,'Fecha Vencimiento');
+   pdf.text(92,74,String(datos[4]));
+   pdf.text(47,80,'Estado');
+   pdf.text(92,80,String(datos[5]));
+   pdf.text(47,86,'Proveedor');
+   pdf.text(92,86,String(datos[6]));
+   pdf.text(47,92,'Identicador');
+   pdf.text(92,92,String(datos[7]));
    
-    pdf.save('Pago Servicio.pdf');  
+   pdf.save('Pago Servicio.pdf');  
 }
     </script>
 </html>
