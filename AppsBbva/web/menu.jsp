@@ -41,7 +41,9 @@
                 <button class="btn btn-warning" onclick='ModuloB()'>HISTORIAL</button>
             </div>
         </div>
-
+        <div>
+            <a href="validarInicio?accion=logout">Cerrar sesión</a>
+        </div>
         <div id='PAGO'> 
             <p>Seleccione su servicio</p>
             <select id='servicio' onchange='CargarDoc()'>
@@ -114,7 +116,7 @@
                 $('#PAGO').hide;
                 $('#CUENTA').hide();
                 $('#HISTORIAL').hide();
-                /*
+                
                 function CargarDoc() {
                     $('#DOCUMENTO').css("visibility", "visible");
                     var servicio = $("#servicio").val();
@@ -142,7 +144,7 @@
                     } else if (estado == "DEBE") {
                         $("#estado").html("DEBE PAGO");
                     }
-                }*/
+                }
 
                 function CargarTarjetas() {
                     var tarjetas = new Array();

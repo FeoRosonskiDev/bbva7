@@ -19,6 +19,13 @@ public class validarInicio extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String accion = request.getParameter("accion");
+        if (accion.equals("logout"))
+        {
+            request.getSession().removeAttribute("usuarioLogueado");
+            response.sendRedirect("index.jsp");
+        }
+        
     }
 
     @Override
