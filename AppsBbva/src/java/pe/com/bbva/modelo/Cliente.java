@@ -12,16 +12,25 @@ package pe.com.bbva.modelo;
 public class Cliente {
     
     private int id_cliente;
+    private String nombre;
     private int dni;
-    private String Nombres;
+    private int clave;
     private int telefono;
-    
+
     public int getId_cliente() {
         return id_cliente;
     }
 
     public void setId_cliente(int id_cliente) {
         this.id_cliente = id_cliente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getDni() {
@@ -32,12 +41,12 @@ public class Cliente {
         this.dni = dni;
     }
 
-    public String getNombres() {
-        return Nombres;
+    public int getClave() {
+        return clave;
     }
 
-    public void setNombres(String Nombres) {
-        this.Nombres = Nombres;
+    public void setClave(int clave) {
+        this.clave = clave;
     }
 
     public int getTelefono() {
@@ -47,6 +56,14 @@ public class Cliente {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+    private int estado ;
     
-  
 }
