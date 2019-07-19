@@ -41,7 +41,9 @@
                 <button class="btn btn-warning" onclick='ModuloB()'>HISTORIAL</button>
             </div>
         </div>
-
+        <div>
+            <a href="validarInicio?accion=logout">Cerrar sesión</a>
+        </div>
         <div id='PAGO'> 
             <p>Seleccione su servicio</p>
             <select id='servicio' onchange='CargarDoc()'>
